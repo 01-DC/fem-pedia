@@ -1,4 +1,6 @@
 import Head from "next/head"
+import CategoryBoard from "../components/CategoryBoard"
+import TodayFeed from "../components/TodayFeed"
 
 export default function Home() {
 	return (
@@ -15,7 +17,10 @@ export default function Home() {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<main className="text-9xl font-bold">Hello World!</main>
+			<div className="grid grid-cols-2 gap-8">
+				<TodayFeed />
+				<CategoryBoard />
+			</div>
 		</>
 	)
 }
