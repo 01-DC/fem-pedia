@@ -64,13 +64,20 @@ const App = ({ Component, pageProps }) => {
 						top: "0px",
 						zIndex: "50",
 					}}>
-					{React.createElement(
-						collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
-						{
-							className: "trigger",
-							onClick: () => setCollapsed(!collapsed),
-						}
-					)}
+					<div className="flex items-center justify-between">
+						<div>
+							{React.createElement(
+								collapsed
+									? MenuUnfoldOutlined
+									: MenuFoldOutlined,
+								{
+									className: "trigger",
+									onClick: () => setCollapsed(!collapsed),
+								}
+							)}
+						</div>
+						<div>Login or username</div>
+					</div>
 				</Header>
 				<Content
 					style={{
