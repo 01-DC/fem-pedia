@@ -40,6 +40,11 @@ const App = ({ Component, pageProps }) => {
 							icon: <UploadOutlined />,
 							label: "My Answers",
 						},
+						{
+							key: "4",
+							icon: <UploadOutlined />,
+							label: "My Blogs",
+						},
 					]}
 				/>
 			</Sider>
@@ -62,7 +67,7 @@ const App = ({ Component, pageProps }) => {
 						margin: "16px 16px",
 						padding: 16,
 						minHeight: "100vh",
-						background: "#D95567",
+						background: colorBgContainer,
 					}}>
 					<Component {...pageProps} />
 				</Content>

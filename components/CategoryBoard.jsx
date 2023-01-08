@@ -20,7 +20,7 @@ const onSearch = (value) => console.log(value)
 
 const CategoryBoard = () => {
 	return (
-		<div>
+		<div className="bg-gray-300 p-4 h-fit">
 			<Search
 				placeholder="input search text"
 				onSearch={onSearch}

@@ -1,13 +1,16 @@
 import React from "react"
 import { useRouter } from "next/router"
+import SingleCatFeed from "../../components/SingleCatFeed"
+import SingleCatSummary from "../../components/SingleCatSummary"
 
 const SingleCategory = () => {
 	const router = useRouter()
 	const { catName } = router.query
 
 	return (
-		<div>
-			<h3 className="font-bold text-2xl mt-4">Feed #{catName}</h3>
+		<div className="grid grid-cols-2 gap-8">
+			<SingleCatFeed catName={catName} />
+			<SingleCatSummary catName={catName} />
 		</div>
 	)
 }

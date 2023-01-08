@@ -17,7 +17,7 @@ export default function Home() {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<div className="grid grid-cols-2 gap-8">
+			<div className="grid grid-cols-2 gap-4">
 				<TodayFeed />
 				<CategoryBoard />
 			</div>

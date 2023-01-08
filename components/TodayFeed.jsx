@@ -17,7 +17,7 @@ const TodayFeed = () => {
 	}, [])
 
 	return (
-		<div>
+		<div className="bg-gray-300 px-4">
 			<h3 className="font-bold text-2xl mt-4">Today's Feed</h3>
 			<div className="mt-4">
 				{posts?.map((p, i) => (
