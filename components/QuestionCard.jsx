@@ -9,10 +9,16 @@ const QuestionCard = ({ question }) => {
 				style={{
 					margin: "16px 0px",
 				}}>
-				<p className="inline text-xs font-bold p-2 rounded-full bg-gray-600 text-white">
-					{question.tag}
-				</p>
+				<div className="flex items-center justify-between">
+					<p className="text-sm font-black border-2 border-gray-600 px-2 rounded-full">
+						{question.userName}
+					</p>
+					<p className="text-xs font-bold p-2 rounded-full bg-gray-600 text-white">
+						{question.tag}
+					</p>
+				</div>
 				<ol className="list-decimal list-inside mt-2 h-48 overflow-auto">
+					<p className="font-bold">Replies:</p>
 					{question.replies.map((r, i) => (
 						<li key={i} className="text-sm my-2 border-y">
 							{r}
