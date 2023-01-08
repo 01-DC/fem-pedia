@@ -3,9 +3,11 @@ import Link from "next/link"
 import {
 	MenuFoldOutlined,
 	MenuUnfoldOutlined,
-	UploadOutlined,
+	BookOutlined,
 	UserOutlined,
-	VideoCameraOutlined,
+	QuestionOutlined,
+	HomeOutlined,
+	CheckOutlined,
 } from "@ant-design/icons"
 import { Layout, Menu, theme } from "antd"
 import "../styles/globals.css"
@@ -19,31 +21,36 @@ const App = ({ Component, pageProps }) => {
 	return (
 		<Layout>
 			<Sider collapsible collapsed={collapsed}>
-				<div className="logo text-white">loda lassan</div>
 				<Menu
 					theme="dark"
 					mode="inline"
+					style={{ position: "sticky", top: "0px" }}
 					defaultSelectedKeys={["1"]}
 					items={[
 						{
 							key: "1",
+							icon: <HomeOutlined />,
+							label: <Link href="/">Fem-Pedia</Link>,
+						},
+						{
+							key: "2",
 							icon: <UserOutlined />,
 							label: <Link href="/profile">My Profile</Link>,
 						},
 						{
-							key: "2",
-							icon: <VideoCameraOutlined />,
-							label: "My Questions",
-						},
-						{
 							key: "3",
-							icon: <UploadOutlined />,
-							label: "My Answers",
+							icon: <QuestionOutlined />,
+							label: <Link href="/questions">My Questions</Link>,
 						},
 						{
 							key: "4",
-							icon: <UploadOutlined />,
-							label: "My Blogs",
+							icon: <CheckOutlined />,
+							label: <Link href="/answers">My Answers</Link>,
+						},
+						{
+							key: "5",
+							icon: <BookOutlined />,
+							label: <Link href="/blogs">My Blogs</Link>,
 						},
 					]}
 				/>
@@ -53,6 +60,9 @@ const App = ({ Component, pageProps }) => {
 					style={{
 						padding: "2px 12px",
 						background: colorBgContainer,
+						position: "sticky",
+						top: "0px",
+						zIndex: "50",
 					}}>
 					{React.createElement(
 						collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,

@@ -55,9 +55,9 @@ const CategoryBoard = () => {
 						/>
 					</svg>
 					<p>
-						Friendships between women, as any woman will tell you,
-						are built of a thousand small kindnesses... swapped back
-						and forth and over again. Michelle Obama, Becoming
+						&quot;Friendships between women, as any woman will tell you,
+						are built of a thousand small kindnesses, swapped back
+						and forth and over again.&quot; ~Michelle Obama, Becoming
 					</p>
 				</blockquote>
 			</div>
