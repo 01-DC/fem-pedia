@@ -1,9 +1,20 @@
 import React from "react"
+import Image from "next/image"
 import { Input, Card } from "antd"
+import img1 from "../assets/periods1.png"
+import img2 from "../assets/motherbaby1.jpg"
+import img3 from "../assets/pregnancy1.png"
+import img4 from "../assets/hygeine1.png"
+
 const { Meta } = Card
 const { Search } = Input
 
-const categories = ["Periods", "Mother & Baby", "Pregnancy", "Personal Hygiene"]
+const categories = [
+	{ title: "Periods", img: img1 },
+	{ title: "Mother & Baby", img: img2 },
+	{ title: "Pregnancy", img: img3 },
+	{ title: "Personal Hygiene", img: img4 },
+]
 const onSearch = (value) => console.log(value)
 
 const CategoryBoard = () => {
@@ -23,14 +34,9 @@ const CategoryBoard = () => {
 						style={{
 							width: 300,
 						}}
-						cover={
-							<img
-								alt="example"
-								src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-							/>
-						}
+						cover={<Image alt="example" src={c.img} />}
 						hoverable>
-						<Meta title={c} />
+						<Meta title={c.title} />
 					</Card>
 				))}
 
@@ -47,10 +53,9 @@ const CategoryBoard = () => {
 						/>
 					</svg>
 					<p>
-						"Flowbite is just awesome. It contains tons of
-						predesigned components and pages starting from login
-						screen to complex dashboard. Perfect choice for your
-						next SaaS application."
+						Friendships between women, as any woman will tell you,
+						are built of a thousand small kindnesses... swapped back
+						and forth and over again. Michelle Obama, Becoming
 					</p>
 				</blockquote>
 			</div>

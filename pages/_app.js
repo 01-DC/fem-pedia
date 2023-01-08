@@ -61,7 +61,7 @@ const App = ({ Component, pageProps }) => {
 						margin: "16px 16px",
 						padding: 16,
 						minHeight: "100vh",
-						background: colorBgContainer,
+						background: "#D95567",
 					}}>
 					<Component {...pageProps} />
 				</Content>
