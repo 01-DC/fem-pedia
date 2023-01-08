@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import Link from "next/link"
 import {
 	MenuFoldOutlined,
 	MenuUnfoldOutlined,
@@ -27,7 +28,7 @@ const App = ({ Component, pageProps }) => {
 						{
 							key: "1",
 							icon: <UserOutlined />,
-							label: "My Profile",
+							label: <Link href="/profile">My Profile</Link>,
 						},
 						{
 							key: "2",

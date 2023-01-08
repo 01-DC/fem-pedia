@@ -1,19 +1,20 @@
 import React from "react"
+import Link from "next/link"
 import Image from "next/image"
 import { Input, Card } from "antd"
 import img1 from "../assets/periods1.png"
 import img2 from "../assets/motherbaby1.jpg"
-import img3 from "../assets/pregnancy1.png"
-import img4 from "../assets/hygeine1.png"
+import img3 from "../assets/pregnancy1_2.png"
+import img4 from "../assets/feminine-hygiene-products-pack_23-2148653232.jpg"
 
 const { Meta } = Card
 const { Search } = Input
 
 const categories = [
-	{ title: "Periods", img: img1 },
-	{ title: "Mother & Baby", img: img2 },
-	{ title: "Pregnancy", img: img3 },
-	{ title: "Personal Hygiene", img: img4 },
+	{ title: "Periods", img: img1, url: "periods" },
+	{ title: "Mother & Baby", img: img2, url: "mother-and-baby" },
+	{ title: "Pregnancy", img: img3, url: "pregnancy" },
+	{ title: "Personal Hygiene", img: img4, url: "personal-hygiene" },
 ]
 const onSearch = (value) => console.log(value)
 
@@ -29,15 +30,16 @@ const CategoryBoard = () => {
 			<h3 className="font-bold text-2xl mt-4">Categories</h3>
 			<div className="flex flex-wrap gap-4 mt-4">
 				{categories.map((c, i) => (
-					<Card
-						key={i}
-						style={{
-							width: 300,
-						}}
-						cover={<Image alt="example" src={c.img} />}
-						hoverable>
-						<Meta title={c.title} />
-					</Card>
+					<Link href={`/categories/${c.url}`} key={i}>
+						<Card
+							style={{
+								width: 300,
+							}}
+							cover={<Image alt="example" src={c.img} />}
+							hoverable>
+							<Meta title={c.title} />
+						</Card>
+					</Link>
 				))}
 
 				<blockquote className="text-xl italic font-semibold text-white border-l-4 border-gray-500 bg-gray-800 p-4">
