@@ -20,7 +20,7 @@ const QuestionCard = ({ question }) => {
 				<ol className="list-decimal list-inside mt-2 h-48 overflow-auto">
 					<p className="font-bold">Replies:</p>
 					{question.replies.map((r, i) => (
-						<li key={i} className="text-sm my-2 border-y">
+						<li key={i} className="text-sm my-2 border-y p-2">
 							{r}
 						</li>
 					))}
