@@ -26,6 +26,7 @@ const CategoryBoard = () => {
 				onSearch={onSearch}
 				enterButton
 				allowClear
+				className="bg-gray-500 rounded-lg"
 			/>
 			<h3 className="font-bold text-2xl mt-4">Categories</h3>
 			<div className="flex flex-wrap gap-4 mt-4">
@@ -55,9 +56,10 @@ const CategoryBoard = () => {
 						/>
 					</svg>
 					<p>
-						&quot;Friendships between women, as any woman will tell you,
-						are built of a thousand small kindnesses, swapped back
-						and forth and over again.&quot; ~Michelle Obama, Becoming
+						&quot;Friendships between women, as any woman will tell
+						you, are built of a thousand small kindnesses, swapped
+						back and forth and over again.&quot; ~Michelle Obama,
+						Becoming
 					</p>
 				</blockquote>
 			</div>

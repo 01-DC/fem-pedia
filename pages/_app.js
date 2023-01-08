@@ -9,7 +9,7 @@ import {
 	HomeOutlined,
 	CheckOutlined,
 } from "@ant-design/icons"
-import { Layout, Menu, theme } from "antd"
+import { Button, Layout, Menu, theme } from "antd"
 import "../styles/globals.css"
 
 const { Header, Sider, Content } = Layout
@@ -30,7 +30,7 @@ const App = ({ Component, pageProps }) => {
 						{
 							key: "1",
 							icon: <HomeOutlined />,
-							label: <Link href="/">Fem-Pedia</Link>,
+							label: <Link href="/">Home</Link>,
 						},
 						{
 							key: "2",
@@ -65,18 +65,30 @@ const App = ({ Component, pageProps }) => {
 						zIndex: "50",
 					}}>
 					<div className="flex items-center justify-between">
-						<div>
-							{React.createElement(
-								collapsed
-									? MenuUnfoldOutlined
-									: MenuFoldOutlined,
-								{
-									className: "trigger",
-									onClick: () => setCollapsed(!collapsed),
-								}
-							)}
+						<div className="flex items-center gap-4">
+							<div>
+								{React.createElement(
+									collapsed
+										? MenuUnfoldOutlined
+										: MenuFoldOutlined,
+									{
+										className: "trigger",
+										onClick: () => setCollapsed(!collapsed),
+									}
+								)}
+							</div>
+							<div className="font-black italic text-2xl">
+								Fem-Pedia
+							</div>
 						</div>
-						<div>Login or username</div>
+						<div>
+							<Button
+								type="primary"
+								size="large"
+								className="bg-blue-500 rounded-lg">
+								Login
+							</Button>
+						</div>
 					</div>
 				</Header>
 				<Content

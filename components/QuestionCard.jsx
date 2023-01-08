@@ -1,5 +1,5 @@
 import React from "react"
-import { Card } from "antd"
+import { Button, Card, Input } from "antd"
 
 const QuestionCard = ({ question }) => {
 	return (
@@ -19,6 +19,10 @@ const QuestionCard = ({ question }) => {
 						</li>
 					))}
 				</ol>
+				<div className="flex items-center mt-2 bg-gray-500 rounded-lg">
+					<Input placeholder="add comment" />
+					<Button type="primary">Add</Button>
+				</div>
 			</Card>
 		</div>
 	)
